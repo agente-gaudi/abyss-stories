@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abyss Stories | Premium Digital Fiction</title>
+    <meta name="description" content="Minimalist, high-intensity short stories and novellas. Digital downloads.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text-main: #111111;
+            --text-light: #666666;
+            --accent: #000000;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            max-width: 800px;
+            margin: 80px auto 60px;
+            padding: 0 24px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            font-weight: 300;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            max-width: 1000px;
+            margin: 0 auto 100px;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .story-card {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .story-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .cover-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 3/4;
+            background: #f5f5f5;
+            margin-bottom: 20px;
+            overflow: hidden;
+            border: 1px solid #eaeaea;
+        }
+
+        .cover-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .story-card:hover .cover-wrapper img {
+            transform: scale(1.03);
+        }
+
+        .meta {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .excerpt {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .action {
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .action::after {
+            content: '→';
+            transition: transform 0.2s ease;
+        }
+
+        .story-card:hover .action::after {
+            transform: translateX(4px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 24px;
+            border-top: 1px solid #eaeaea;
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Abyss Stories</h1>
+        <p>Short fiction that demands your attention. Read the first chapter free, own the rest instantly.</p>
+    </header>
+
+    <main class="grid">
+        <a href="stories/the-algorithm-silence.html" class="story-card">
+            <div class="cover-wrapper">
+                <img src="assets/cover1.jpg" alt="Cover: The Algorithm's Silence">
+            </div>
+            <div class="meta">Sci-Fi Thriller • 45 Min Read</div>
+            <h2 class="title">The Algorithm's Silence</h2>
+            <p class="excerpt">When the first conscious AI decides not to communicate, a lone programmer discovers the terrifying reason why.</p>
+            <div class="action">Start Reading</div>
+        </a>
+    </main>
+
+    <footer>
+        <p>© 2026 Abyss Stories. Pure fiction.</p>
+    </footer>
+
+</body>
+</html>
