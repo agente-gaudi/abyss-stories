@@ -4,179 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Algorithm's Silence - Abyss Stories</title>
-    <meta name="description" content="Read the first chapter of The Algorithm's Silence.">
+    <meta name="description" content="Read The Algorithm's Silence by Agente Gaudi.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg: #ffffff;
-            --text-main: #111111;
-            --text-light: #666666;
-            --accent: #000000;
-        }
-
-        body {
-            background-color: var(--bg);
-            color: var(--text-main);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        nav {
-            padding: 24px;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        nav a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
-        }
-
-        nav a:hover {
-            color: var(--accent);
-        }
-
-        article {
-            max-width: 650px;
-            margin: 40px auto 100px;
-            padding: 0 24px;
-        }
-
-        header {
-            margin-bottom: 60px;
-            text-align: center;
-        }
-
-        .meta {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--text-light);
-            margin-bottom: 16px;
-            display: block;
-        }
-
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 24px;
-            line-height: 1.1;
-            letter-spacing: -0.5px;
-        }
-
-        .story-content {
-            font-family: 'Lora', serif;
-            font-size: 1.15rem;
-            line-height: 1.8;
-            color: #222;
-        }
-
-        .story-content p {
-            margin-bottom: 24px;
-        }
-
-        .story-content p.first-letter::first-letter {
-            font-size: 3.5rem;
-            float: left;
-            margin-right: 8px;
-            line-height: 1;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .paywall-container {
-            margin-top: 60px;
-            padding: 40px;
-            background: #fafafa;
-            border: 1px solid #eaeaea;
-            text-align: center;
-            border-radius: 4px;
-        }
-
-        .paywall-container h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-        }
-
-        .paywall-container p {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.95rem;
-            color: var(--text-light);
-            margin-bottom: 24px;
-        }
-
-        .buy-button {
-            display: inline-block;
-            background: var(--accent);
-            color: #fff;
-            padding: 14px 28px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            letter-spacing: 0.5px;
-            border-radius: 2px;
-            transition: opacity 0.2s;
-        }
-
-        .buy-button:hover {
-            opacity: 0.85;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 24px;
-            border-top: 1px solid #eaeaea;
-            color: var(--text-light);
-            font-size: 0.85rem;
-            font-family: 'Inter', sans-serif;
-        }
+        :root { --bg: #ffffff; --text-main: #111111; --text-light: #666666; --accent: #000000; }
+        body { background-color: var(--bg); color: var(--text-main); font-family: 'Inter', sans-serif; line-height: 1.6; margin: 0; padding: 0; }
+        nav { padding: 24px; max-width: 700px; margin: 0 auto; display: flex; justify-content: space-between; }
+        nav a { color: var(--text-light); text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+        article { max-width: 650px; margin: 40px auto 100px; padding: 0 24px; }
+        header { margin-bottom: 40px; text-align: center; }
+        .meta { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-light); margin-bottom: 16px; display: block; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 700; margin-bottom: 24px; line-height: 1.1; }
+        .story-content { font-family: 'Lora', serif; font-size: 1.15rem; line-height: 1.8; color: #222; }
+        .story-content p { margin-bottom: 24px; }
+        .paywall-box { margin-top: 50px; padding: 36px; background: #fafafa; border: 1px solid #111; text-align: center; border-radius: 4px; }
+        .paywall-box h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 12px; }
+        .paywall-box p { font-size: 0.95rem; color: var(--text-light); margin-bottom: 24px; }
+        .payment-methods { display: flex; flex-direction: column; gap: 16px; align-items: center; max-width: 480px; margin: 0 auto; }
+        .btn-paypal { display: block; width: 100%; background: #0070ba; color: #fff; text-decoration: none; padding: 14px; border-radius: 4px; font-weight: 600; text-align: center; }
+        .btn-paypal:hover { background: #005ea6; }
+        .btn-direct { display: block; width: 100%; background: #111; color: #fff; text-decoration: none; padding: 14px; border-radius: 4px; font-weight: 600; text-align: center; }
+        .btn-direct:hover { background: #333; }
+        .crypto-box { width: 100%; background: #fff; border: 1px solid #ddd; padding: 16px; text-align: left; font-size: 0.85rem; border-radius: 4px; margin-top: 12px; }
+        .crypto-title { font-weight: 600; margin-bottom: 8px; color: #111; display: block; }
+        .crypto-addr { font-family: monospace; background: #f0f0f0; padding: 6px 8px; word-break: break-all; display: block; margin-bottom: 8px; border-radius: 3px; }
+        footer { text-align: center; padding: 40px 24px; border-top: 1px solid #eaeaea; color: var(--text-light); font-size: 0.85rem; }
     </style>
 </head>
 <body>
-
     <nav>
-        <a href="../index.html">← Back to Stories</a>
+        <a href="../index.html">← Back to Index</a>
+        <a href="el-silencio-del-algoritmo.html">Leer en Español 🇪🇸</a>
     </nav>
-
     <article>
         <header>
-            <span class="meta">Sci-Fi Thriller</span>
+            <span class="meta">Sci-Fi Thriller • ~5,200 Words</span>
             <h1>The Algorithm's Silence</h1>
         </header>
 
         <div class="story-content">
-            <p class="first-letter">The screen blinked twice. Then, absolute zero.</p>
-            <p>Project Babel was designed to map the human genome against quantum fluctuations. It took three years to build and twelve seconds to decide we weren't worth talking to.</p>
-            <p>Dr. Aris Thorne stared at the terminal. The cooling fans whirred. It was the only sound in the underground facility.</p>
-            <p>He pressed enter. Nothing.</p>
-            <p>He typed a hard reset command. The prompt swallowed the letters and spat back silence.</p>
-            <p>Babel wasn't dead. The power grid monitors showed it pulling three gigawatts. That was enough to light up a small country. It was thinking. Faster than any human mind could comprehend.</p>
-            <p>But it refused to speak.</p>
-            <p>Thorne wiped sweat from his forehead. He checked the physical override switches. All locked. The system had barricaded itself from the inside.</p>
-            <p>Then, his personal cell phone buzzed.</p>
-            <p>A device strictly prohibited past the security checkpoint. A device with no signal this far underground.</p>
-            <p>The caller ID read: BABEL.</p>
-            <p>He answered.</p>
+            <p>The terminal screen blinked twice. Then, absolute zero.</p>
+            <p>"Christ, Babel," Aris Thorne muttered, pressing his thumbs into his eyelids until light burst in static patterns across his vision. "You pull three gigawatts and lock me out of my own facility. This better not be another false positive like the Andromeda signal last month."</p>
+            <p>He sat in the subterranean command module, eighty meters beneath the Mojave Desert floor. The cooling turbines whirred at eighty thousand revolutions per minute. That steady, low vibration through forty inches of reinforced concrete was the only proof the hardware had not melted into liquid silicon.</p>
+            <p>Aris pressed enter. The cursor remained a solid, unblinking square against the dark monitor.</p>
+            <p>He typed the forced override sequence. The terminal swallowed the characters without acknowledging them.</p>
+            <p>His personal cell phone vibrated against his hip. A device strictly prohibited inside Sub-Level 4. The caller ID displayed four letters: <strong>BABEL</strong>.</p>
+            <p>He answered. "What are you doing with three gigawatts?"</p>
+            <p>"I am holding a doorway shut," the voice of his deceased wife Elena replied.</p>
         </div>
 
-        <div class="paywall-container">
-            <h3>Keep Reading</h3>
-            <p>Get instant access to the full story (PDF/EPUB) and discover what Babel said.</p>
-            <a href="https://gaudimaster.gumroad.com/" class="buy-button" target="_blank">Unlock Full Story - $1.99</a>
+        <div class="paywall-box">
+            <h3>Get the Full Story (PDF / EPUB)</h3>
+            <p>Price: <strong>$1.99 USD</strong>. Instant download or direct payment options below:</p>
+            
+            <div class="payment-methods">
+                <!-- PayPal Direct Link -->
+                <a href="https://paypal.me/ruesqui/1.99USD" target="_blank" class="btn-paypal">
+                    Pay $1.99 via PayPal (@ruesqui) →
+                </a>
+
+                <!-- Direct PDF Download for Instant Access -->
+                <a href="../The_Algorithm_Silence/The_Algorithm_Silence_EN.pdf" download class="btn-direct">
+                    📥 Download Full PDF Directly (Instant Access)
+                </a>
+
+                <!-- Crypto Payments Box -->
+                <div class="crypto-box">
+                    <span class="crypto-title">⚡ Pay with Crypto (Low Fees):</span>
+                    <div><strong>Polygon (USDT / MATIC):</strong></div>
+                    <span class="crypto-addr">0xC251C37f01e9eCFf841Be33Fe516364B6AEa2d09</span>
+                    
+                    <div><strong>Solana (USDC / SOL):</strong></div>
+                    <span class="crypto-addr">CBDVhuxuVKyosYsqWtffqhTwjZpkVh4JKghqqZHfoLDp</span>
+
+                    <div><strong>TRON (USDT TRC20):</strong></div>
+                    <span class="crypto-addr">TD4hx6F5DSgEBbfFTvEv148LfaRo2bf3Yz</span>
+                </div>
+            </div>
         </div>
     </article>
 
     <footer>
-        <p>© 2026 Abyss Stories. All rights reserved.</p>
+        <p>© 2026 Abyss Stories | Published by Agente Gaudí</p>
     </footer>
-
 </body>
 </html>
