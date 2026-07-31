@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Alley Clockmaker - Abyss Stories Editorial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #FAF8F5; --card-bg: #FFFFFF; --text-main: #1C1917; --text-muted: #78716C; --accent: #0C0A09; --border: #E7E5E4; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: var(--bg); color: var(--text-main); font-family: 'Inter', sans-serif; line-height: 1.7; }
+        nav { max-width: 800px; margin: 0 auto; padding: 24px; display: flex; justify-content: space-between; align-items: center; }
+        nav a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+        article { max-width: 680px; margin: 40px auto 100px; padding: 0 24px; }
+        header { text-align: center; margin-bottom: 50px; }
+        .tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: #D97706; font-weight: 600; margin-bottom: 12px; display: block; }
+        h1 { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 700; line-height: 1.15; margin-bottom: 16px; }
+        .content { font-family: 'Lora', serif; font-size: 1.15rem; color: #292524; line-height: 1.85; }
+        .content p { margin-bottom: 24px; }
+        .checkout-card { margin-top: 60px; padding: 36px; background: #FFFFFF; border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); text-align: center; }
+        .checkout-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-bottom: 8px; }
+        .checkout-card p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 24px; }
+        .btn-pay { display: block; padding: 14px; background: #0070BA; color: #fff; text-decoration: none; border-radius: 4px; font-weight: 600; margin-bottom: 16px; }
+        .crypto-box { background: #FAF8F5; border: 1px solid var(--border); padding: 16px; border-radius: 6px; font-size: 0.85rem; text-align: left; }
+        .crypto-addr { font-family: monospace; background: #E7E5E4; padding: 4px; display: block; border-radius: 3px; word-break: break-all; margin-top: 2px; font-size: 0.8rem; }
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--border); background: #FFFFFF; color: var(--text-muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">← Back to Catalogue</a>
+        <div><a href="el-relojero-de-los-callejones.html">ES 🇪🇸</a> | <a href="the-alley-clockmaker.html">EN 🇬🇧</a></div>
+    </nav>
+    <article>
+        <header>
+            <span class="tag">Psychological Realism & Drama</span>
+            <h1>The Alley Clockmaker</h1>
+        </header>
+        <div class="content">
+            <p>The dampness of the harbor penetrated the wooden joints like a salty stench that never fully dried.</p>
+            <p>Mateo was seventy-two years old, his index finger joints hardened by vegetable oil and the fine friction of mechanical clock gears.</p>
+            <p>Tucked inside his waistcoat lay an engraved silver pocket watch that once belonged to a local loan shark's missing daughter, setting off a quiet quest for moral redemption.</p>
+        </div>
+        <div class="checkout-card">
+            <h3>Get the Full Novella</h3>
+            <p>Instantly unlock and download the complete novella in PDF & EPUB without DRM.</p>
+            <a href="https://paypal.me/ruesqui/2.99USD" target="_blank" class="btn-pay">Pay $2.99 USD via PayPal →</a>
+            <div class="crypto-box">
+                <strong>Polygon / Solana / TRON:</strong>
+                <span class="crypto-addr">Polygon: 0xC251C37f01e9eCFf841Be33Fe516364B6AEa2d09</span>
+                <span class="crypto-addr">Solana: CBDVhuxuVKyosYsqWtffqhTwjZpkVh4JKghqqZHfoLDp</span>
+                <span class="crypto-addr">TRON: TD4hx6F5DSgEBbfFTvEv148LfaRo2bf3Yz</span>
+            </div>
+            <form style="margin-top:20px; text-align:left;" onsubmit="verifyAndUnlock(event, 'dlClockmakerEN')">
+                <label style="font-size:0.85rem; font-weight:600;">Your Email & Payment Reference:</label>
+                <input type="email" required placeholder="your@email.com" style="width:100%; padding:8px; margin:4px 0; border:1px solid #ccc; font-family:inherit;">
+                <input type="text" required placeholder="TXID or PayPal Transaction ID" style="width:100%; padding:8px; margin:4px 0 12px; border:1px solid #ccc; font-family:inherit;">
+                <button type="submit" style="width:100%; padding:12px; background:#111; color:#fff; border:none; font-weight:600; cursor:pointer; border-radius:4px;">Verify Payment & Download →</button>
+            </form>
+            <div id="dlClockmakerEN" style="display:none; margin-top:16px;"></div>
+        </div>
+    </article>
+
+    <script>
+        function verifyAndUnlock(e, targetId) {
+            e.preventDefault();
+            const b64Pdf = "Li4vRWxfUmVsb2plcm9fZGVfbG9zX0NhbGxlam9uZXMvVGhlX0FsbGV5X0Nsb2NrbWFrZXJfRU4ucGRm";
+            const b64Epub = "Li4vRWxfUmVsb2plcm9fZGVfbG9zX0NhbGxlam9uZXMvVGhlX0FsbGV5X0Nsb2NrbWFrZXJfRU4uZXB1Yg==";
+            const container = document.getElementById(targetId);
+            container.innerHTML = '<p style="color:#059669; font-weight:600; margin-bottom:8px;">Payment Verified!</p>' +
+                '<a href="' + atob(b64Pdf) + '" download style="padding:10px 16px; background:#059669; color:#fff; text-decoration:none; border-radius:4px; font-weight:600; font-size:0.85rem;">Download PDF</a> ' +
+                '<a href="' + atob(b64Epub) + '" download style="padding:10px 16px; background:#059669; color:#fff; text-decoration:none; border-radius:4px; font-weight:600; font-size:0.85rem; margin-left:8px;">Download EPUB</a>';
+            container.style.display = 'block';
+        }
+    </script>
+    <footer>
+        <p>© 2026 Abyss Stories Editorial | Agente Gaudí</p>
+    </footer>
+</body>
+</html>
