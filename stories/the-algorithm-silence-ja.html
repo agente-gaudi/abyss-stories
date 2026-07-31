@@ -49,9 +49,18 @@
                 <span class="crypto-addr">Solana: CBDVhuxuVKyosYsqWtffqhTwjZpkVh4JKghqqZHfoLDp</span>
                 <span class="crypto-addr">TRON: TD4hx6F5DSgEBbfFTvEv148LfaRo2bf3Yz</span>
             </div>
-            <div style="margin-top:20px;">
+            
+        <form style="margin-top:20px; text-align:left;" onsubmit="event.preventDefault(); document.getElementById('dlJaArea').style.display='block';">
+            <label style="font-size:0.85rem; font-weight:600;">メールアドレス (Email):</label>
+            <input type="email" required placeholder="email@domain.com" style="width:100%; padding:8px; margin:4px 0 12px; border:1px solid #ccc; font-family:inherit;">
+            <label style="font-size:0.85rem; font-weight:600;">取引ID / トランザクションハッシュ (TXID / Hash):</label>
+            <input type="text" required placeholder="PayPal ID or Crypto Hash" style="width:100%; padding:8px; margin:4px 0 12px; border:1px solid #ccc; font-family:inherit;">
+            <button type="submit" style="width:100%; padding:12px; background:#111; color:#fff; border:none; font-weight:600; cursor:pointer; border-radius:4px;">支払いを確認してダウンロード (Verify & Download) →</button>
+        </form>
+        <div id="dlJaArea" style="display:none; margin-top:16px;">
+        
                 <a href="../The_Algorithm_Silence/The_Algorithm's_Silence_EN.pdf" download style="padding:10px 16px; background:#111; color:#fff; text-decoration:none; border-radius:4px; font-weight:600; font-size:0.85rem;">PDF完全版を即時ダウンロード →</a>
-            </div>
+            </div></div>
         </div>
     </article>
     <footer>
