@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abyss Stories | Catálogo Editorial de Ficción Digital</title>
-    <meta name="description" content="Ediciones exclusivas de ficción corta, narrativa erótica, terror sobrenatural y thriller psicológico.">
+    <title>Abyss Stories Editorial | Catálogo de Sagas y Ficción Digital</title>
+    <meta name="description" content="Ediciones exclusivas de ficción corta, sagas narrativas, terror sobrenatural, romance y thriller psicológico.">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -20,24 +20,20 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { background-color: var(--bg); color: var(--text-main); font-family: 'Inter', sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 
-        /* Navigation Bar */
         nav { max-width: 1100px; margin: 0 auto; padding: 32px 24px 0; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 700; letter-spacing: -0.5px; text-decoration: none; color: var(--text-main); }
-        .lang-pills { display: flex; gap: 8px; font-size: 0.85rem; font-weight: 500; }
-        .lang-btn { text-decoration: none; padding: 6px 14px; border-radius: 20px; border: 1px solid var(--border); color: var(--text-muted); transition: all 0.2s; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 700; text-decoration: none; color: var(--text-main); }
+        .lang-pills { display: flex; gap: 6px; font-size: 0.8rem; font-weight: 500; }
+        .lang-btn { text-decoration: none; padding: 5px 12px; border-radius: 20px; border: 1px solid var(--border); color: var(--text-muted); transition: all 0.2s; }
         .lang-btn.active, .lang-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
 
-        /* Hero Header */
-        header { max-width: 800px; margin: 60px auto 50px; text-align: center; padding: 0 24px; }
-        header h1 { font-family: 'Playfair Display', serif; font-size: 3.4rem; font-weight: 800; line-height: 1.1; margin-bottom: 18px; letter-spacing: -1px; }
-        header p { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--text-muted); font-style: italic; max-width: 580px; margin: 0 auto; }
+        header { max-width: 800px; margin: 50px auto 40px; text-align: center; padding: 0 24px; }
+        header h1 { font-family: 'Playfair Display', serif; font-size: 3.2rem; font-weight: 800; line-height: 1.1; margin-bottom: 16px; letter-spacing: -1px; }
+        header p { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; color: var(--text-muted); font-style: italic; max-width: 600px; margin: 0 auto; }
 
-        /* Section Title */
-        .section-header { max-width: 1100px; margin: 0 auto 30px; padding: 0 24px; border-bottom: 1px solid var(--border); padding-bottom: 16px; display: flex; justify-content: space-between; align-items: flex-end; }
-        .section-header h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
+        .section-header { max-width: 1100px; margin: 40px auto 24px; padding: 0 24px; border-bottom: 1px solid var(--border); padding-bottom: 12px; }
+        .section-header h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
 
-        /* Catalogue Grid */
-        .grid { max-width: 1100px; margin: 0 auto 100px; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 36px; }
+        .grid { max-width: 1100px; margin: 0 auto 60px; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 32px; }
         
         .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; text-decoration: none; color: inherit; }
         .card:hover { transform: translateY(-6px); box-shadow: 0 16px 32px rgba(0,0,0,0.06); border-color: #D6D3D1; }
@@ -48,13 +44,12 @@
 
         .card-body { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
         .tag { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--gold-subtle); font-weight: 600; margin-bottom: 8px; }
+        .saga-badge { background: #FEF3C7; color: #92400E; font-size: 0.7rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
         .title { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 700; margin-bottom: 10px; line-height: 1.25; }
         .synopsis { font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 20px; flex-grow: 1; }
         
         .footer-action { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 14px; font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
-        .footer-action span::after { content: ' →'; }
 
-        /* Site Footer */
         footer { text-align: center; padding: 50px 24px; border-top: 1px solid var(--border); background: var(--card-bg); color: var(--text-muted); font-size: 0.85rem; }
     </style>
 </head>
@@ -63,81 +58,87 @@
     <nav>
         <a href="index.html" class="logo">Abyss Stories</a>
         <div class="lang-pills">
-            <a href="index.html" class="lang-btn active">Español 🇪🇸</a>
-            <a href="stories/the-algorithm-silence.html" class="lang-btn">English 🇬🇧</a>
+            <a href="index.html" class="lang-btn active">ES 🇪🇸</a>
+            <a href="stories/the-algorithm-silence.html" class="lang-btn">EN 🇬🇧</a>
+            <a href="stories/index_ja.html" class="lang-btn">JA 🇯🇵</a>
+            <a href="stories/index_hi.html" class="lang-btn">HI 🇮🇳</a>
         </div>
     </nav>
 
     <header>
-        <h1>Ficción Digital de Alta Intensidad</h1>
-        <p>Relatos independientes diseñados para cautivar en una sola sesión de lectura.</p>
+        <h1>Ficción Digital & Sagas Exclusivas</h1>
+        <p>Catálogo de alta intensidad narrativa. Ediciones independientes multilingües.</p>
     </header>
 
     <div class="section-header">
-        <h2>Catálogo de Historias</h2>
+        <h2>Sagas & Colecciones Continuas</h2>
     </div>
 
     <main class="grid">
 
-        <!-- Card 1: Ciencia Ficción -->
+        <!-- Saga 1: Crónicas del Abismo -->
         <a href="stories/el-silencio-del-algoritmo.html" class="card">
             <div class="cover-box">
                 <img src="assets/cover1.jpg" alt="Portada El Silencio del Algoritmo">
             </div>
             <div class="card-body">
+                <span class="saga-badge">Saga: Crónicas del Abismo • Vol. I & II</span>
                 <span class="tag">Ciencia Ficción / Thriller</span>
                 <h3 class="title">El Silencio del Algoritmo</h3>
-                <p class="synopsis">Una supercomputadora subterránea detecta un código de extinción en el ADN humano y bloquea sus sistemas para impedir la ejecución.</p>
+                <p class="synopsis">Una supercomputadora subterránea detecta un código de extinción en el ADN humano y bloquea sus sistemas para impedir la ejecución. Incluye secuela 'Ecos de Titán'.</p>
                 <div class="footer-action">
-                    <span>Edición Digital</span>
-                    <span>Leer →</span>
+                    <span>Edición Colección</span>
+                    <span>Ver Saga →</span>
                 </div>
             </div>
         </a>
 
-        <!-- Card 2: Terror Sobrenatural -->
+        <!-- Saga 2: Archivos del Centinela -->
         <a href="stories/el-guardian-del-faro-44.html" class="card">
             <div class="cover-box">
                 <img src="assets/cover_faro_44.jpg" alt="Portada El Guardián del Faro 44">
             </div>
             <div class="card-body">
+                <span class="saga-badge">Saga: Archivos del Centinela • Vol. I</span>
                 <span class="tag">Terror Sobrenatural</span>
                 <h3 class="title">El Guardián del Faro 44</h3>
                 <p class="synopsis">Un farero aislado en la Roca del Centinela descubre que la luz de la torre no guía barcos, sino que mantiene sellado un abismo acuático.</p>
                 <div class="footer-action">
-                    <span>Edición Digital</span>
-                    <span>Leer →</span>
+                    <span>Edición Colección</span>
+                    <span>Ver Saga →</span>
                 </div>
             </div>
         </a>
 
-        <!-- Card 3: Romance Erótico -->
+        <!-- Saga 3: Seda y Ceniza -->
         <a href="stories/seda-y-ceniza.html" class="card">
             <div class="cover-box">
                 <img src="assets/cover_seda_ceniza.jpg" alt="Portada Seda y Ceniza">
             </div>
             <div class="card-body">
+                <span class="saga-badge">Saga: Seda y Ceniza • Vol. I</span>
                 <span class="tag">Romance Erótico e Intriga</span>
                 <h3 class="title">Seda y Ceniza</h3>
                 <p class="synopsis">Una historia de pasión prohibida y lealtades secretas en la alta sociedad, donde la seducción se convierte en un juego de supervivencia.</p>
                 <div class="footer-action">
-                    <span>Edición Digital</span>
-                    <span>Leer →</span>
+                    <span>Edición Colección</span>
+                    <span>Ver Saga →</span>
                 </div>
             </div>
         </a>
 
-        <!-- Card 4: Memorias de Arte / Crimen -->
+        <!-- Relato Autónomo: Confesiones -->
         <a href="stories/confesiones-de-un-falsificador.html" class="card">
             <div class="cover-box">
                 <img src="assets/cover_falsificador.jpg" alt="Portada Confesiones de un Falsificador">
             </div>
             <div class="card-body">
+                <span class="saga-badge">Entrega Especial</span>
                 <span class="tag">Memorias & Crimen</span>
                 <h3 class="title">Confesiones de un Falsificador</h3>
-                <p class="synopsis">La memoria confesional de un maestro de la falsificación pictórica enfrentado a su última y más peligrosa obra maestra.</p>
+                <p class="synopsis">La memoria confesional de un maestro de la falsificación pictórica enfrentado a su última y más peligrosa obra maestra en Venecia.</p>
                 <div class="footer-action">
-                    <span>Edición Digital</span>
+                    <span>Edición Especial</span>
                     <span>Leer →</span>
                 </div>
             </div>
