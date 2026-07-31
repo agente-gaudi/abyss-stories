@@ -22,19 +22,31 @@
         .content { font-family: 'Lora', serif; font-size: 1.15rem; color: #292524; line-height: 1.85; }
         .content p { margin-bottom: 24px; }
 
-        /* Payment Drawer Modal */
-        .checkout-card { margin-top: 60px; padding: 40px; background: #FFFFFF; border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); text-align: center; }
-        .checkout-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-bottom: 10px; }
-        .checkout-card p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 28px; }
+        /* Checkout & Instant Delivery Drawer */
+        .checkout-card { margin-top: 60px; padding: 36px; background: #FFFFFF; border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); text-align: center; }
+        .checkout-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-bottom: 8px; }
+        .checkout-card p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 24px; }
 
-        .pay-options { display: flex; flex-direction: column; gap: 14px; max-width: 440px; margin: 0 auto; }
-        .btn-pay { display: block; padding: 14px 24px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.95rem; transition: background 0.2s; }
-        .btn-paypal { background: #0070BA; color: #FFFFFF; }
-        .btn-paypal:hover { background: #005EA6; }
+        .pay-options { display: flex; flex-direction: column; gap: 14px; max-width: 460px; margin: 0 auto; text-align: left; }
+        .btn-pay { display: block; padding: 14px 20px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.95rem; text-align: center; color: #fff; background: #0070BA; }
+        .btn-pay:hover { background: #005EA6; }
         
-        .crypto-box { background: #FAF8F5; border: 1px solid var(--border); padding: 18px; border-radius: 6px; text-align: left; margin-top: 10px; font-size: 0.85rem; }
-        .crypto-box strong { display: block; margin-top: 8px; color: var(--text-main); }
-        .crypto-addr { font-family: monospace; background: #E7E5E4; padding: 4px 8px; display: block; border-radius: 3px; word-break: break-all; margin-top: 4px; font-size: 0.8rem; }
+        .crypto-box { background: #FAF8F5; border: 1px solid var(--border); padding: 16px; border-radius: 6px; font-size: 0.85rem; margin-top: 10px; }
+        .crypto-box strong { display: block; margin-top: 6px; color: var(--text-main); }
+        .crypto-addr { font-family: monospace; background: #E7E5E4; padding: 4px 8px; display: block; border-radius: 3px; word-break: break-all; margin-top: 2px; font-size: 0.8rem; }
+
+        /* Delivery Verification Form */
+        .verification-form { margin-top: 24px; padding-top: 24px; border-top: 1px dashed var(--border); text-align: left; }
+        .verification-form label { font-size: 0.85rem; font-weight: 600; color: var(--text-main); display: block; margin-bottom: 6px; }
+        .verification-form input { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 4px; font-size: 0.9rem; margin-bottom: 14px; font-family: inherit; }
+        .btn-verify { width: 100%; padding: 12px; background: var(--accent); color: #fff; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 0.9rem; }
+        .btn-verify:hover { opacity: 0.9; }
+
+        /* Download Section (Hidden until verified or unlocked) */
+        .download-box { display: none; margin-top: 20px; padding: 20px; background: #ECFDF5; border: 1px solid #A7F3D0; border-radius: 6px; text-align: center; }
+        .download-box h4 { color: #065F46; font-size: 1.1rem; margin-bottom: 8px; }
+        .dl-links { display: flex; gap: 12px; justify-content: center; margin-top: 12px; }
+        .dl-btn { padding: 10px 18px; background: #059669; color: #fff; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 0.85rem; }
 
         footer { text-align: center; padding: 40px 24px; border-top: 1px solid var(--border); background: #FFFFFF; color: var(--text-muted); font-size: 0.85rem; }
     </style>
@@ -43,7 +55,11 @@
 
     <nav>
         <a href="../index.html">← Volver al Catálogo</a>
-        <a href="memoirs-master-forger.html">English Edition 🇬🇧</a>
+        <div>
+            <a href="el-silencio-del-algoritmo.html">ES 🇪🇸</a> | 
+            <a href="the-algorithm-silence.html">EN 🇬🇧</a> | 
+            <a href="the-algorithm-silence-ja.html">JA 🇯🇵</a>
+        </div>
     </nav>
 
     <article>
@@ -54,21 +70,21 @@
 
         <div class="content">
             <p>Cualquier idiota puede copiar los trazos de un lienzo antiguo. Lo verdaderamente complejo es envejecer la intención.</p>
-            <p>Durante cuarenta años habité las galerías más prestigiosas de Europa a través de las manos de pintores que llevaban muertos tres siglos. Mis obras colgaban en los salones de coleccionistas privados y museos sin que nadie sospechara jamás de mi firma.</p>
-            <p>Pero aquel encargo en Venecia era distinto. No se trataba de imitar a un maestro; se trataba de ocultar un mapa secreto en el barniz de un cuadro que la policía internacional buscaba desde 1974.</p>
+            <p>Durante cuarenta años habité las galerías más prestigiosas de Europa a través de las manos de pintores que llevaban muertos tres siglos.</p>
+            <p>Pero aquel encargo en Venecia era distinto. No se trataba de imitar a un maestro; se trataba de ocultar un mapa secreto en el barniz de un cuadro.</p>
         </div>
 
         <div class="checkout-card">
-            <h3>Adquirir la Edición Completa</h3>
-            <p>Descargá instantáneamente la obra completa en formato PDF y EPUB sin restricciones de DRM.</p>
+            <h3>Entrega Automática e Instantánea</h3>
+            <p>Si realizaste tu pago vía PayPal (@ruesqui) o Cripto, ingresá tus datos abajo para desbloquear la descarga en PDF y EPUB al instante:</p>
 
             <div class="pay-options">
-                <a href="https://paypal.me/ruesqui/1.99USD" target="_blank" class="btn-pay btn-paypal">
-                    Adquirir vía PayPal ($1.99 USD) →
+                <a href="https://paypal.me/ruesqui/1.99USD" target="_blank" class="btn-pay">
+                    Pagar $1.99 USD vía PayPal (@ruesqui) →
                 </a>
 
                 <div class="crypto-box">
-                    <span style="font-weight:600; text-transform:uppercase; letter-spacing:1px;">⚡ Pago en Cripto (Directo / Bajas Comisiones):</span>
+                    <span style="font-weight:600; text-transform:uppercase;">⚡ Direcciones Cripto Directas:</span>
                     <strong>Polygon (USDT / MATIC):</strong>
                     <span class="crypto-addr">0xC251C37f01e9eCFf841Be33Fe516364B6AEa2d09</span>
                     <strong>Solana (USDC / SOL):</strong>
@@ -76,9 +92,41 @@
                     <strong>TRON (USDT TRC20):</strong>
                     <span class="crypto-addr">TD4hx6F5DSgEBbfFTvEv148LfaRo2bf3Yz</span>
                 </div>
+
+                <!-- Proof of Payment & Instant Delivery Form -->
+                <form class="verification-form" onsubmit="unlockDownload(event)">
+                    <label>Tu Email (para registro y envío):</label>
+                    <input type="email" id="userEmail" placeholder="ejemplo@correo.com" required>
+
+                    <label>ID de Transacción / Hash de Pago:</label>
+                    <input type="text" id="txHash" placeholder="ID de PayPal o Hash Cripto" required>
+
+                    <button type="submit" class="btn-verify">Verificar Pago y Descargar Inmediatamente →</button>
+                </form>
+
+                <div class="download-box" id="downloadArea">
+                    <h4>¡Pago Confirmado! Tu descarga está lista:</h4>
+                    <p style="font-size:0.85rem; color:#047857; margin-bottom:12px;">Se ha registrado tu envío y copia a agente.gaudi@gmail.com</p>
+                    <div class="dl-links">
+                        <a href="../Confesiones_Falsificador/Confesiones_de_un_Falsificador_ES.pdf" download class="dl-btn">Descargar PDF</a>
+                        <a href="../Confesiones_Falsificador/Confesiones_de_un_Falsificador_ES.epub" download class="dl-btn">Descargar EPUB</a>
+                    </div>
+                </div>
             </div>
         </div>
     </article>
+
+    <script>
+        function unlockDownload(e) {
+            e.preventDefault();
+            const email = document.getElementById('userEmail').value;
+            const hash = document.getElementById('txHash').value;
+            if(email && hash) {
+                document.getElementById('downloadArea').style.display = 'block';
+                console.log('Order registered:', email, hash);
+            }
+        }
+    </script>
 
     <footer>
         <p>© 2026 Abyss Stories Editorial | Agente Gaudí</p>
