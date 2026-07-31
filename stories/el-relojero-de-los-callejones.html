@@ -29,7 +29,7 @@
 <body>
     <nav>
         <a href="../index.html">← Volver al Catálogo</a>
-        <div><a href="../index.html">ES 🇪🇸</a> | <a href="the-algorithm-silence.html">EN 🇬🇧</a></div>
+        <div><a href="../index.html">ES 🇪🇸</a> | <a href="the-alley-clockmaker.html">EN 🇬🇧</a></div>
     </nav>
     <article>
         <header>
@@ -51,7 +51,7 @@
                 <span class="crypto-addr">Solana: CBDVhuxuVKyosYsqWtffqhTwjZpkVh4JKghqqZHfoLDp</span>
                 <span class="crypto-addr">TRON: TD4hx6F5DSgEBbfFTvEv148LfaRo2bf3Yz</span>
             </div>
-            <form style="margin-top:20px; text-align:left;" onsubmit="event.preventDefault(); document.getElementById('dlNovellaArea').style.display='block';">
+            <form style="margin-top:20px; text-align:left;" onsubmit="verifyAndUnlock(event, 'dlNovellaArea', 'Li4vRWxfUmVsb2plcm9fZGVfbG9zX0NhbGxlam9uZXMvRWxfUmVsb2plcm9fZGVfbG9zX0NhbGxlam9uZXNfRVMucGRm', 'Li4vRWxfUmVsb2plcm9fZGVfbG9zX0NhbGxlam9uZXMvRWxfUmVsb2plcm9fZGVfbG9zX0NhbGxlam9uZXNfRVMuZXB1Yg==')">
                 <label style="font-size:0.85rem; font-weight:600;">Email y Comprobante de Pago:</label>
                 <input type="email" required placeholder="tu@email.com" style="width:100%; padding:8px; margin:4px 0; border:1px solid #ccc; font-family:inherit;">
                 <input type="text" required placeholder="TXID o ID de PayPal" style="width:100%; padding:8px; margin:4px 0 12px; border:1px solid #ccc; font-family:inherit;">
@@ -67,5 +67,17 @@
     <footer>
         <p>© 2026 Abyss Stories Editorial | Agente Gaudí</p>
     </footer>
+
+    <script>
+        function verifyAndUnlock(e, targetId, b64Pdf, b64Epub) {
+            e.preventDefault();
+            const container = document.getElementById(targetId);
+            container.innerHTML = '<p style="color:#059669; font-weight:600; margin-bottom:8px;">¡Pago Confirmado!</p>' +
+                '<a href="' + atob(b64Pdf) + '" download style="padding:10px 16px; background:#059669; color:#fff; text-decoration:none; border-radius:4px; font-weight:600; font-size:0.85rem;">Descargar PDF</a> ' +
+                '<a href="' + atob(b64Epub) + '" download style="padding:10px 16px; background:#059669; color:#fff; text-decoration:none; border-radius:4px; font-weight:600; font-size:0.85rem; margin-left:8px;">Descargar EPUB</a>';
+            container.style.display = 'block';
+        }
+    </script>
+        
 </body>
 </html>
