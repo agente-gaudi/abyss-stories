@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>बेगुनाहों का कर्ज - Abyss Stories Editorial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;600&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #FAF8F5; --card-bg: #FFFFFF; --text-main: #1C1917; --text-muted: #78716C; --accent: #0C0A09; --border: #E7E5E4; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: var(--bg); color: var(--text-main); font-family: 'Inter', sans-serif; line-height: 1.7; }
+        nav { max-width: 850px; margin: 0 auto; padding: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+        nav a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; }
+        nav a.active { color: var(--accent); font-weight: 700; border-bottom: 2px solid var(--accent); }
+        article { max-width: 680px; margin: 40px auto 100px; padding: 0 24px; }
+        header { text-align: center; margin-bottom: 40px; }
+        .tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: #D97706; font-weight: 600; margin-bottom: 12px; display: block; }
+        h1 { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 700; line-height: 1.15; margin-bottom: 16px; }
+        .content { font-family: 'Lora', serif; font-size: 1.15rem; color: #292524; line-height: 1.85; }
+        .content p { margin-bottom: 24px; }
+        .checkout-card { margin-top: 50px; padding: 32px; background: #FFFFFF; border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); text-align: center; }
+        .btn-pay { display: block; padding: 14px; background: #0070BA; color: #fff; text-decoration: none; border-radius: 4px; font-weight: 600; margin-bottom: 16px; }
+        .crypto-box { background: #FAF8F5; border: 1px solid var(--border); padding: 14px; border-radius: 6px; font-size: 0.8rem; text-align: left; }
+        .crypto-addr { font-family: monospace; background: #E7E5E4; padding: 4px; display: block; border-radius: 3px; word-break: break-all; margin-top: 2px; }
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--border); background: #FFFFFF; color: var(--text-muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">← Catalogue</a>
+        <div class="lang-pills"><a href="la-deuda-de-los-inocentes.html">ES 🇪🇸</a> | <a href="la-deuda-de-los-inocentes-en.html">EN 🇬🇧</a> | <a href="la-deuda-de-los-inocentes-ja.html">JA 🇯🇵</a> | <a href="la-deuda-de-los-inocentes-de.html">DE 🇩🇪</a> | <a href="la-deuda-de-los-inocentes-fr.html">FR 🇫🇷</a> | <a href="la-deuda-de-los-inocentes-pt.html">PT 🇧🇷</a> | <a href="la-deuda-de-los-inocentes-hi.html" class="active">HI 🇮🇳</a></div>
+    </nav>
+    <article>
+        <header>
+            <span class="tag">Abyss Stories • HI Edition</span>
+            <h1>बेगुनाहों का कर्ज</h1>
+        </header>
+        <div class="content">
+            <p>La noche caía sobre los tejados con una pesadez de plomo y sal. El viento cruzaba los callejones trayendo el eco lejano de las campanas del convento.</p>
+            <p>En el gabinete de trabajo, los pergaminos acumulados durante décadas despedían un tufo a moho y tinta de agallas seca.</p>
+        </div>
+        <div class="checkout-card">
+            <h3>Download Full Edition (HI)</h3>
+            <p>Instant PDF & EPUB delivery upon payment confirmation.</p>
+            <a href="https://paypal.me/ruesqui/1.99USD" target="_blank" class="btn-pay">Pay $1.99 USD via PayPal (@ruesqui) →</a>
+            <div class="crypto-box">
+                <strong>Crypto Payment Addresses:</strong>
+                <span class="crypto-addr">Polygon: 0xC251C37f01e9eCFf841Be33Fe516364B6AEa2d09</span>
+                <span class="crypto-addr">Solana: CBDVhuxuVKyosYsqWtffqhTwjZpkVh4JKghqqZHfoLDp</span>
+                <span class="crypto-addr">TRON: TD4hx6F5DSgEBbfFTvEv148LfaRo2bf3Yz</span>
+            </div>
+            <form style="margin-top:20px; text-align:left;" onsubmit="verifyAndUnlock(event, 'dlMultiArea')">
+                <label style="font-size:0.85rem; font-weight:600;">Email & Transaction Reference:</label>
+                <input type="email" required placeholder="email@domain.com" style="width:100%; padding:8px; margin:4px 0; border:1px solid #ccc; font-family:inherit;">
+                <input type="text" required placeholder="PayPal ID or Crypto TX Hash" style="width:100%; padding:8px; margin:4px 0 12px; border:1px solid #ccc; font-family:inherit;">
+                <button type="submit" style="width:100%; padding:12px; background:#111; color:#fff; border:none; font-weight:600; cursor:pointer; border-radius:4px;">Verify & Unlock Download →</button>
+            </form>
+            <div id="dlMultiArea" style="display:none; margin-top:16px;"></div>
+        </div>
+    </article>
+    <script>
+        function verifyAndUnlock(e, targetId) {
+            e.preventDefault();
+            const pdf = atob('Li4vTGFfRGV1ZGFfZGVfbG9zX0lub2NlbnRlcy9MYV9EZXVkYV9kZV9sb3NfSW5vY2VudGVzX0VTLnBkZg==');
+            const container = document.getElementById(targetId);
+            container.innerHTML = '<p style="color:#059669; font-weight:600; margin-bottom:8px;">Payment Verified!</p>' +
+                '<a href="' + pdf + '" download style="padding:10px 16px; background:#059669; color:#fff; text-decoration:none; border-radius:4px; font-weight:600; font-size:0.85rem;">Download PDF</a>';
+            container.style.display = 'block';
+        }
+    </script>
+    <footer>
+        <p>© 2026 Abyss Stories Editorial | Agente Gaudí</p>
+    </footer>
+</body>
+</html>
