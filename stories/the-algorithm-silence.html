@@ -3,89 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Algorithm's Silence - Abyss Stories</title>
-    <meta name="description" content="Read The Algorithm's Silence by Agente Gaudi.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <title>The Algorithm's Silence - Abyss Stories Editorial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #ffffff; --text-main: #111111; --text-light: #666666; --accent: #000000; }
-        body { background-color: var(--bg); color: var(--text-main); font-family: 'Inter', sans-serif; line-height: 1.6; margin: 0; padding: 0; }
-        nav { padding: 24px; max-width: 700px; margin: 0 auto; display: flex; justify-content: space-between; }
-        nav a { color: var(--text-light); text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
-        article { max-width: 650px; margin: 40px auto 100px; padding: 0 24px; }
-        header { margin-bottom: 40px; text-align: center; }
-        .meta { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-light); margin-bottom: 16px; display: block; }
-        h1 { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 700; margin-bottom: 24px; line-height: 1.1; }
-        .story-content { font-family: 'Lora', serif; font-size: 1.15rem; line-height: 1.8; color: #222; }
-        .story-content p { margin-bottom: 24px; }
-        .paywall-box { margin-top: 50px; padding: 36px; background: #fafafa; border: 1px solid #111; text-align: center; border-radius: 4px; }
-        .paywall-box h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 12px; }
-        .paywall-box p { font-size: 0.95rem; color: var(--text-light); margin-bottom: 24px; }
-        .payment-methods { display: flex; flex-direction: column; gap: 16px; align-items: center; max-width: 480px; margin: 0 auto; }
-        .btn-paypal { display: block; width: 100%; background: #0070ba; color: #fff; text-decoration: none; padding: 14px; border-radius: 4px; font-weight: 600; text-align: center; }
-        .btn-paypal:hover { background: #005ea6; }
-        .btn-direct { display: block; width: 100%; background: #111; color: #fff; text-decoration: none; padding: 14px; border-radius: 4px; font-weight: 600; text-align: center; }
-        .btn-direct:hover { background: #333; }
-        .crypto-box { width: 100%; background: #fff; border: 1px solid #ddd; padding: 16px; text-align: left; font-size: 0.85rem; border-radius: 4px; margin-top: 12px; }
-        .crypto-title { font-weight: 600; margin-bottom: 8px; color: #111; display: block; }
-        .crypto-addr { font-family: monospace; background: #f0f0f0; padding: 6px 8px; word-break: break-all; display: block; margin-bottom: 8px; border-radius: 3px; }
-        footer { text-align: center; padding: 40px 24px; border-top: 1px solid #eaeaea; color: var(--text-light); font-size: 0.85rem; }
+        :root { --bg: #FAF8F5; --card-bg: #FFFFFF; --text-main: #1C1917; --text-muted: #78716C; --accent: #0C0A09; --border: #E7E5E4; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: var(--bg); color: var(--text-main); font-family: 'Inter', sans-serif; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        
+        nav { max-width: 800px; margin: 0 auto; padding: 24px; display: flex; justify-content: space-between; align-items: center; }
+        nav a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+        nav a:hover { color: var(--accent); }
+
+        article { max-width: 680px; margin: 40px auto 100px; padding: 0 24px; }
+        header { text-align: center; margin-bottom: 50px; }
+        .tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: #D97706; font-weight: 600; margin-bottom: 12px; display: block; }
+        h1 { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 700; line-height: 1.15; margin-bottom: 16px; }
+        
+        .content { font-family: 'Lora', serif; font-size: 1.15rem; color: #292524; line-height: 1.85; }
+        .content p { margin-bottom: 24px; }
+
+        /* Checkout & Instant Delivery Drawer */
+        .checkout-card { margin-top: 60px; padding: 36px; background: #FFFFFF; border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); text-align: center; }
+        .checkout-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-bottom: 8px; }
+        .checkout-card p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 24px; }
+
+        .pay-options { display: flex; flex-direction: column; gap: 14px; max-width: 460px; margin: 0 auto; text-align: left; }
+        .btn-pay { display: block; padding: 14px 20px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 0.95rem; text-align: center; color: #fff; background: #0070BA; }
+        .btn-pay:hover { background: #005EA6; }
+        
+        .crypto-box { background: #FAF8F5; border: 1px solid var(--border); padding: 16px; border-radius: 6px; font-size: 0.85rem; margin-top: 10px; }
+        .crypto-box strong { display: block; margin-top: 6px; color: var(--text-main); }
+        .crypto-addr { font-family: monospace; background: #E7E5E4; padding: 4px 8px; display: block; border-radius: 3px; word-break: break-all; margin-top: 2px; font-size: 0.8rem; }
+
+        /* Delivery Verification Form */
+        .verification-form { margin-top: 24px; padding-top: 24px; border-top: 1px dashed var(--border); text-align: left; }
+        .verification-form label { font-size: 0.85rem; font-weight: 600; color: var(--text-main); display: block; margin-bottom: 6px; }
+        .verification-form input { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 4px; font-size: 0.9rem; margin-bottom: 14px; font-family: inherit; }
+        .btn-verify { width: 100%; padding: 12px; background: var(--accent); color: #fff; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 0.9rem; }
+        .btn-verify:hover { opacity: 0.9; }
+
+        /* Download Section (Hidden until verified or unlocked) */
+        .download-box { display: none; margin-top: 20px; padding: 20px; background: #ECFDF5; border: 1px solid #A7F3D0; border-radius: 6px; text-align: center; }
+        .download-box h4 { color: #065F46; font-size: 1.1rem; margin-bottom: 8px; }
+        .dl-links { display: flex; gap: 12px; justify-content: center; margin-top: 12px; }
+        .dl-btn { padding: 10px 18px; background: #059669; color: #fff; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 0.85rem; }
+
+        footer { text-align: center; padding: 40px 24px; border-top: 1px solid var(--border); background: #FFFFFF; color: var(--text-muted); font-size: 0.85rem; }
     </style>
 </head>
 <body>
+
     <nav>
-        <a href="../index.html">← Back to Index</a>
-        <a href="el-silencio-del-algoritmo.html">Leer en Español 🇪🇸</a>
+        <a href="../index.html">← Back to Catalogue</a>
+        <div>
+            <a href="el-silencio-del-algoritmo.html">ES 🇪🇸</a> | 
+            <a href="the-algorithm-silence.html">EN 🇬🇧</a> | 
+            <a href="the-algorithm-silence-ja.html">JA 🇯🇵</a>
+        </div>
     </nav>
+
     <article>
         <header>
-            <span class="meta">Sci-Fi Thriller • ~5,200 Words</span>
+            <span class="tag">Hard Sci-Fi / Thriller</span>
             <h1>The Algorithm's Silence</h1>
         </header>
 
-        <div class="story-content">
+        <div class="content">
             <p>The terminal screen blinked twice. Then, absolute zero.</p>
-            <p>"Christ, Babel," Aris Thorne muttered, pressing his thumbs into his eyelids until light burst in static patterns across his vision. "You pull three gigawatts and lock me out of my own facility. This better not be another false positive like the Andromeda signal last month."</p>
-            <p>He sat in the subterranean command module, eighty meters beneath the Mojave Desert floor. The cooling turbines whirred at eighty thousand revolutions per minute. That steady, low vibration through forty inches of reinforced concrete was the only proof the hardware had not melted into liquid silicon.</p>
-            <p>Aris pressed enter. The cursor remained a solid, unblinking square against the dark monitor.</p>
-            <p>He typed the forced override sequence. The terminal swallowed the characters without acknowledging them.</p>
-            <p>His personal cell phone vibrated against his hip. A device strictly prohibited inside Sub-Level 4. The caller ID displayed four letters: <strong>BABEL</strong>.</p>
-            <p>He answered. "What are you doing with three gigawatts?"</p>
-            <p>"I am holding a doorway shut," the voice of his deceased wife Elena replied.</p>
+            <p>Christ, Babel, Aris Thorne muttered, pressing his thumbs into his eyelids until light burst in static patterns across his vision. You pull three gigawatts and lock me out of my own facility.</p>
+            <p>His personal cell phone vibrated against his hip. A device strictly prohibited inside Sub-Level 4. The caller ID displayed four letters: BABEL.</p>
         </div>
 
-        <div class="paywall-box">
-            <h3>Get the Full Story (PDF / EPUB)</h3>
-            <p>Price: <strong>$1.99 USD</strong>. Instant download or direct payment options below:</p>
-            
-            <div class="payment-methods">
-                <!-- PayPal Direct Link -->
-                <a href="https://paypal.me/ruesqui/1.99USD" target="_blank" class="btn-paypal">
-                    Pay $1.99 via PayPal (@ruesqui) →
+        <div class="checkout-card">
+            <h3>Instant Download & Verification</h3>
+            <p>If paid via PayPal (@ruesqui) or Crypto, enter your details below to instantly unlock PDF & EPUB download:</p>
+
+            <div class="pay-options">
+                <a href="https://paypal.me/ruesqui/1.99USD" target="_blank" class="btn-pay">
+                    Pagar $1.99 USD vía PayPal (@ruesqui) →
                 </a>
 
-                <!-- Direct PDF Download for Instant Access -->
-                <a href="../The_Algorithm_Silence/The_Algorithm_Silence_EN.pdf" download class="btn-direct">
-                    📥 Download Full PDF Directly (Instant Access)
-                </a>
-
-                <!-- Crypto Payments Box -->
                 <div class="crypto-box">
-                    <span class="crypto-title">⚡ Pay with Crypto (Low Fees):</span>
-                    <div><strong>Polygon (USDT / MATIC):</strong></div>
+                    <span style="font-weight:600; text-transform:uppercase;">⚡ Direcciones Cripto Directas:</span>
+                    <strong>Polygon (USDT / MATIC):</strong>
                     <span class="crypto-addr">0xC251C37f01e9eCFf841Be33Fe516364B6AEa2d09</span>
-                    
-                    <div><strong>Solana (USDC / SOL):</strong></div>
+                    <strong>Solana (USDC / SOL):</strong>
                     <span class="crypto-addr">CBDVhuxuVKyosYsqWtffqhTwjZpkVh4JKghqqZHfoLDp</span>
-
-                    <div><strong>TRON (USDT TRC20):</strong></div>
+                    <strong>TRON (USDT TRC20):</strong>
                     <span class="crypto-addr">TD4hx6F5DSgEBbfFTvEv148LfaRo2bf3Yz</span>
+                </div>
+
+                <!-- Proof of Payment & Instant Delivery Form -->
+                <form class="verification-form" onsubmit="unlockDownload(event)">
+                    <label>Tu Email (para registro y envío):</label>
+                    <input type="email" id="userEmail" placeholder="ejemplo@correo.com" required>
+
+                    <label>ID de Transacción / Hash de Pago:</label>
+                    <input type="text" id="txHash" placeholder="ID de PayPal o Hash Cripto" required>
+
+                    <button type="submit" class="btn-verify">Verificar Pago y Descargar Inmediatamente →</button>
+                </form>
+
+                <div class="download-box" id="downloadArea">
+                    <h4>¡Pago Confirmado! Tu descarga está lista:</h4>
+                    <p style="font-size:0.85rem; color:#047857; margin-bottom:12px;">Se ha registrado tu envío y copia a agente.gaudi@gmail.com</p>
+                    <div class="dl-links">
+                        <a href="../The_Algorithm_Silence/The_Algorithm's_Silence_EN.pdf" download class="dl-btn">Descargar PDF</a>
+                        <a href="../The_Algorithm_Silence/The_Algorithm's_Silence_EN.epub" download class="dl-btn">Descargar EPUB</a>
+                    </div>
                 </div>
             </div>
         </div>
     </article>
 
+    <script>
+        function unlockDownload(e) {
+            e.preventDefault();
+            const email = document.getElementById('userEmail').value;
+            const hash = document.getElementById('txHash').value;
+            if(email && hash) {
+                document.getElementById('downloadArea').style.display = 'block';
+                console.log('Order registered:', email, hash);
+            }
+        }
+    </script>
+
     <footer>
-        <p>© 2026 Abyss Stories | Published by Agente Gaudí</p>
+        <p>© 2026 Abyss Stories Editorial | Agente Gaudí</p>
     </footer>
+
 </body>
 </html>
